@@ -1,0 +1,1 @@
+KEK (Kekurangan Energi Kronis) pada remaja putri merupakan kondisi ketika tubuh kekurangan asupan energi & zat gizi dalam waktu yang lama. Aplikasi ini dapat membantu kamu memahami KEK yang sering terjadi pada remaja aktif!
