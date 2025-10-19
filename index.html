@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi KEK pada Remaja Putri</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #FFB6C1, #B2D8B2);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #FFB6C1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .description {
+            background-color: #B2D8B2;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .card {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card-header {
+            background-color: #FFB6C1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .card-content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .card.active .card-content {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .infographic {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .infographic div {
+            text-align: center;
+            width: 30%;
+        }
+        .quiz {
+            margin: 20px 0;
+        }
+        .quiz button {
+            background-color: #B2D8B2;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .quiz button:hover {
+            background-color: #FFB6C1;
+        }
+        #game {
+            text-align: center;
+        }
+        .food {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background: #FFB6C1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .food:hover {
+            transform: scale(1.1);
+        }
+        .score {
+            font-size: 24px;
+            color: #B2D8B2;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFB6C1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KEmandA (edukasi KEK by Amanda) 🌸</h1>
+        <p>Pelajari, pahami, dan cegah KEK dengan cara yang menarik! 💖</p>
+    </header>
+    <div class="description">
+        <p>Selamat datang di aplikasi edukasi interaktif tentang Kekurangan Energi Kronis (KEK) pada remaja putri. Klik kartu di bawah untuk menjelajahi pengertian, penyebab, gejala, pencegahan, penanganan, game, dan tips motivasi! 🌟</p>
+    </div>
+
+    <div class="card" id="pengertian">
+        <div class="card-header" onclick="toggleCard('pengertian')">Pengertian KEK 😊</div>
+        <div class="card-content">
+            <p>Kekurangan Energi Kronis (KEK) adalah kondisi di mana asupan energi (kalori) dari makanan tidak mencukupi kebutuhan tubuh dalam jangka panjang. Pada remaja putri, ini sering terkait dengan malnutrisi dan dapat mempengaruhi pertumbuhan, kesehatan reproduksi, dan produktivitas. ⚡</p>
+            <div class="infographic">
+                <div>
+                    <p>Asupan Energi Rendah 🔥</p>
+                </div>
+                <div>
+                    <p>Dampak pada Tubuh 💪</p>
+                </div>
+                <div>
+                    <p>Remaja Putri Rentan 👩‍🎓</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="penyebab">
+        <div class="card-header" onclick="toggleCard('penyebab')">Penyebab KEK 🤔</div>
+        <div class="card-content">
+            <p>KEK dapat disebabkan oleh pola makan yang tidak seimbang, kurangnya aktivitas fisik, atau kondisi sosial-ekonomi. Pada remaja putri, diet ketat untuk penampilan atau kurangnya akses makanan bergizi sering menjadi faktor utama. 🍎</p>
+            <ul>
+                <li>Pola makan tidak seimbang (kurang karbohidrat, protein, lemak sehat). 🍞</li>
+                <li>Kurangnya aktivitas fisik yang menyebabkan metabolisme lambat. 🏃‍♀️</li>
+                <li>Faktor sosial: Kemiskinan, kurang pendidikan nutrisi. 💸</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="gejala">
+        <div class="card-header" onclick="toggleCard('gejala')">Gejala KEK 😴</div>
+        <div class="card-content">
+            <p>Gejala KEK meliputi kelelahan kronis, penurunan berat badan, dan gangguan menstruasi. Jika tidak ditangani, dapat menyebabkan masalah kesehatan jangka panjang seperti osteoporosis. ⚠️</p>
+            <div class="infographic">
+                <div>
+                    <p>Kelelahan Berlebihan 😪</p>
+                </div>
+                <div>
+                    <p>Penurunan Berat Badan 📉</p>
+                </div>
+                <div>
+                    <p>Gangguan Menstruasi 🌸</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="pencegahan">
+        <div class="card-header" onclick="toggleCard('pencegahan')">Pencegahan KEK 🛡️</div>
+        <div class="card-content">
+            <p>Pencegahan meliputi makan seimbang, olahraga teratur, dan edukasi nutrisi. Konsumsi makanan kaya energi seperti nasi, sayur, dan protein hewani dapat membantu. 🥦</p>
+            <div class="quiz">
+                <p>Quiz Cepat: Apa yang termasuk makanan pencegahan KEK? 🤓</p>
+                <button onclick="alert('Benar! Sayur hijau kaya nutrisi. 🌱')">Sayur Hijau</button>
+                <button onclick="alert('Salah! Kurangi junk food. 🚫')">Junk Food</button>
+                <button onclick="alert('Benar! Protein membantu energi. 🍗')">Ayam</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="penanganan">
+        <div class="card-header" onclick="toggleCard('penanganan')">Penanganan KEK 🩺</div>
+        <div class="card-content">
+            <p>Penanganan melibatkan konsultasi dokter, suplementasi nutrisi, dan perubahan pola hidup. Jika KEK parah, intervensi medis seperti terapi nutrisi diperlukan. 💊</p>
+            <ul>
+                <li>Konsultasi dengan ahli gizi atau dokter. 👨‍⚕️</li>
+                <li>Suplementasi vitamin dan mineral. 💊</li>
+                <li>Program makan seimbang dan olahraga. 🏋️‍♀️</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="game">
+        <div class="card-header" onclick="toggleCard('game')">Game: Jaga Asupan Makanmu 🎮</div>
+        <div class="card-content">
+            <p>Pilih makanan sehat untuk mencegah KEK! Klik makanan yang baik untuk energi kronis. 🍎</p>
+            <div id="game-container">
+                <div class="food" onclick="selectFood('Sayur', true)">Sayur Hijau 🌱</div>
+                <div class="food" onclick="selectFood('Junk', false)">Junk Food 🍔</div>
+                <div class="food" onclick="selectFood('Buah', true)">Buah 🍓</div>
+                <div class="food" onclick="selectFood('Minuman', false)">Minuman Manis 🥤</div>
+                <div class="food" onclick="selectFood('Protein', true)">Protein (Ayam) 🍗</div>
+                <div class="food" onclick="selectFood('Air Putih', true)">Air Putih 💧</div>
+                <div class="food" onclick="selectFood('Jus Buah', true)">Jus Buah 🧃</div>
+            </div>
+            <p class="score">Skor: <span id="score">0</span> 🏆</p>
+        </div>
+    </div>
+
+    <div class="card" id="tips">
+        <div class="card-header" onclick="toggleCard('tips')">Tips Sehat 🌟</div>
+        <div class="card-content">
+            <p>Tips tambahan untuk mencegah dan mengatasi KEK pada remaja putri. 💪</p>
+            <ul>
+                <li>Konsumsi makanan tinggi kalori seperti kacang-kacangan dan alpukat untuk meningkatkan energi. 🥑</li>
+                <li>Lakukan pemeriksaan kesehatan rutin untuk mendeteksi KEK dini. 🩺</li>
+                <li>Tambahkan suplemen zat besi jika diperlukan, terutama saat menstruasi. 💊</li>
+                <li>Hindari stres berlebihan dengan meditasi atau hobi yang menyenangkan. 🧘‍♀️</li>
+                <li>Edukasi keluarga tentang nutrisi untuk dukungan lingkungan. 👨‍👩‍👧</li>
+                <li>Catat asupan makan harian untuk memantau pola nutrisi. 📓</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="motivasi">
+        <div class="card-header" onclick="toggleCard('motivasi')">Untukmu 💖</div>
+        <div class="card-content">
+            <p>Hai remaja putri yang kuat! Kamu adalah bintang yang bersinar di dunia ini. Jaga kesehatanmu dengan baik, karena tubuhmu adalah kuil yang harus dirawat dengan cinta. Setiap langkah kecil yang kamu ambil untuk makan sehat dan berolahraga adalah kemenangan besar. Ingat, kamu layak mendapatkan energi penuh untuk mengejar impianmu. Tetaplah semangat, karena masa depanmu cerah dan penuh potensi! 🌟✨</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Edukasi KEK. Dibuat untuk remaja putri yang sehat! 💕</p>
+    </footer>
+
+    <script>
+        function toggleCard(cardId) {
+            const card = document.getElementById(cardId);
+            card.classList.toggle('active');
+        }
+
+        let score = 0;
+        function selectFood(food, isHealthy) {
+            if (isHealthy) {
+                score += 10;
+                alert('Bagus! ' + food + ' membantu mencegah KEK. 😊');
+            } else {
+                score -= 5;
+                alert('Hati-hati! ' + food + ' bisa memperburuk KEK. 😟');
+            }
+            document.getElementById('score').textContent = score;
+        }
+    </script>
+</body>
+</html>
